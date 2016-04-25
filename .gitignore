@@ -8,3 +8,7 @@ atom.symlink/.apm
 atom.symlink/blob-store
 
 git/gitconfig.symlink
+
+fish.configlink/fish_history
+fish.configlink/fishd.*
+fish.configlink/functions

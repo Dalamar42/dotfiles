@@ -9,6 +9,8 @@ If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read his post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
+These dotfiles for use with the Fish shell.
+
 ## install
 
 Run this:
@@ -34,9 +36,13 @@ this script in `bin/`.
 
 Everything's built around topic areas. If you're adding a new area to your
 forked dotfiles — say, "Java" — you can simply add a `java` directory and put
-files in there. Anything with an extension of `.zsh` will get automatically
-included into your shell. Anything with an extension of `.symlink` will get
+files in there. Anything with an extension of `.symlink` will get
 symlinked without extension into `$HOME` when you run `script/bootstrap`.
+Similarly anything with an extension of `.configlink` will get symlinked
+without extension under `$HOME/.config` when you run `script/boostrap`.
+Anything named `path.fish` will be expected to configure PATH and will be 
+added to your shell. Any directory named `aliases.fish` will be expected to
+contain files that setup aliases and will also be added to the shell.
 
 ## what's inside
 
@@ -51,16 +57,19 @@ There's a few special files in the hierarchy.
 
 - **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
   available everywhere.
-- **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
-  environment.
-- **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
+- **topic/path.fish**: Any file named `path.fish` is loaded first and is
   expected to setup `$PATH` or similar.
-- **topic/completion.zsh**: Any file named `completion.zsh` is loaded
-  last and is expected to setup autocomplete.
+- **topic/aliases.fish/*.fish**: Any such files are expected to setup aliases.
 - **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
+- **topic/\*.configlink**: Any files ending in `*.symlink` get symlinked into
+  your `$HOME/.config`. This is so you can keep all of those versioned in your 
+  dotfiles but still keep those autoloaded files in your home directory. These get
+  symlinked in when you run `script/bootstrap`.
+- **topic/install.sh**: This is expected to be an installer for the respective
+  topic and will be invoked by `script/install`
 
 ## bugs
 
