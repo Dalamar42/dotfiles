@@ -15,10 +15,11 @@ fi
 # Install homebrew packages
 brew install grc coreutils spark
 
-# Install useful utilities
-brew install httpie z jq keybase gnupg2 unrar
+# Install useful tools
+brew install httpie z jq keybase gnupg2 unrar python3
 
 # Install the fish shell
 brew install fish
 
 exit 0
+
