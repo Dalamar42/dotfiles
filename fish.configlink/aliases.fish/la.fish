@@ -1,6 +1,6 @@
 if which gls > /dev/null
   function la
-    gls -lAh --color
+    gls -lAh --color $argv
   end
 else
   function la
