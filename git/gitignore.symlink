@@ -8,3 +8,6 @@
 
 # Misc
 *~
+
+# Python virtualenv
+.venv

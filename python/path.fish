@@ -1,8 +1,8 @@
-if test (command -v python3) -a (pip3 list | grep virtualfish)
-    eval (python3 -m virtualfish)
+# Ensure we are not already in a virtualenv
+if functions -q vf
+    vf deactivate > /dev/null
+end
 
-    if test -z (vf ls | grep -E '^venv3$')
-        vf new venv3
-    end
-    vf activate venv3
+if test (command -v python3) -a (pip3 list | grep virtualfish)
+    eval (python3 -m virtualfish auto_activation global_requirements projects)
 end
