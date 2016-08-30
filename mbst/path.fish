@@ -3,4 +3,4 @@ if test -d ~/dev/opt/
     set -x PATH $PATH $opt
   end
 end
-set -x PATH $PATH ~/dev/infra/bin
+set -x PATH $PATH ~/dev/metabroadcast/infra/bin

@@ -1,5 +1,5 @@
 function infra
-  cd $PROJECTS/infra
+  cd $PROJECTS/metabroadcast/infra
 end
 
 funcsave infra

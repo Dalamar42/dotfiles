@@ -1,5 +1,5 @@
 function owl
-  cd $PROJECTS/atlas
+  cd $PROJECTS/metabroadcast/atlas
 end
 
 funcsave owl
