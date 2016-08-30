@@ -24,6 +24,8 @@
     lol = log --pretty=oneline --abbrev-commit --graph --decorate # a colorful tree of commits
     amend = commit --amend -C HEAD # add staged files to previous commit, retaining the original message
     cf = show --name-only # e.g. git cf <commit>, show the files changed in a commit.
+    spull = !git submodule foreach --recursive git checkout master && git pull && git submodule update --remote --rebase
+    spush = !git submodule foreach --recursive git checkout master && git push --recurse-submodules=check
 [color]
     diff = auto
     status = auto
@@ -49,3 +51,6 @@
     default = simple
 [rerere]
     enabled = 1
+[diff]
+	submodule = log
+
