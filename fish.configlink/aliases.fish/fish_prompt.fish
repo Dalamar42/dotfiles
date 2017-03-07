@@ -62,7 +62,8 @@ function fish_prompt --description 'Write out the prompt'
 
 	set -l virtualfish_prompt
 	if test "$VIRTUAL_ENV" != ''
-		set virtualfish_prompt ' (venv)' "$normal"
+	    set -l vf_env (echo (basename $VIRTUAL_ENV) | cut -c -4)
+		set virtualfish_prompt " (vf-$vf_env)" "$normal"
 	end
 
 	set -l prompt_status
