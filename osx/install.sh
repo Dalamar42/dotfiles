@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Sets reasonable OS X defaults.
 #
 # Or, in other words, set shit how I like in OS X.
@@ -8,7 +10,14 @@
 # Many of the customisations are from:
 #   https://www.learningosx.com/101-ways-to-tweak-os-x-using-terminal/
 #
-# Run ./set-defaults.sh and you'll be good to go.
+# Run ./install.sh and you'll be good to go.
+
+set -e
+
+if [ "$(uname -s)" != 'Darwin' ]; then
+    echo 'Not on OS X. Skipping setting OS X defaults...'
+    exit 0
+fi
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
