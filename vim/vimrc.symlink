@@ -11,7 +11,7 @@ call pathogen#infect()
 set title                 " Update the title of your window or your terminal
 set number                " Display line numbers
 set ruler                 " Display cursor position
-set nowrap                " Wrap lines when they are too long
+set nowrap                " Do not wrap lines when they are too long
 set scrolloff=3           " Display at least 3 lines around you cursor (for scrolling)
 set guioptions=T          " Enable the toolbar
 
