@@ -1,0 +1,10 @@
+# Config for Logitech Marathon mouse and Gnome
+
+# Workspace Up
+"xte 'keydown Control_L' keydown Alt_L' 'key Up' 'keyup Control_L' 'keyup Alt_L'" b:6
+
+# Workspace Down
+"xte 'keydown Control_L' keydown Alt_L' 'key Down' 'keyup Control_L' 'keyup Alt_L'" b:7
+
+# Gnome Shell Overview
+"xte 'keydown Control_L' 'keydown Alt_L' 'key T' 'keyup Control_L' 'keyup Alt_L'" release + b:10
