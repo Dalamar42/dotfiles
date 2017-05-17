@@ -53,4 +53,4 @@ set guifont=DejaVu\ Sans\ Mono\ 10
 set antialias
 
 " -- Set vim to use the system's clipboard so we can yank-paste outside of vim
-set clipboard=unnamed
+set clipboard=unnamedplus
