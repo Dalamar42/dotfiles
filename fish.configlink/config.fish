@@ -28,3 +28,4 @@ end
 for file in $DOTFILES/**/aliases.fish/*.fish
   source $file
 end
+
