@@ -18,7 +18,7 @@
     df = diff
     lg = log -p
     ff = pull --ff-only # get new commits from remote, will fail with local-only commits - see `up`
-    up = pull --rebase # get new commits from remote, local-only commits will be rebased onto those fetched
+    up = !git-up
     fm = merge --ff-only --log # get commits from another branch.
     ml = merge --log # will add the short commit messages to the merge commit message
     lol = log --pretty=oneline --abbrev-commit --graph --decorate # a colorful tree of commits
