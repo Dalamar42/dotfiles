@@ -54,3 +54,9 @@ set antialias
 
 " -- Set vim to use the system's clipboard so we can yank-paste outside of vim
 set clipboard=unnamedplus
+
+" -- Rebind left/right to l; so we don't have to move from the home row
+noremap l h
+noremap ; l
+noremap h ;
+
