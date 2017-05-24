@@ -1,5 +1,7 @@
-" -- Rebind left/right to l; so we don't have to move from the home row
-noremap l h
-noremap ; l
-noremap h ;
+" -- Rebind navigation to a wasd like ijkl
+noremap j h
+noremap i k
+noremap k j
+noremap h i
+noremap <space> i
 
