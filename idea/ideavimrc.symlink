@@ -1,0 +1,5 @@
+" -- Rebind left/right to l; so we don't have to move from the home row
+noremap l h
+noremap ; l
+noremap h ;
+
