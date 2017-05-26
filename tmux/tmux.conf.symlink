@@ -28,6 +28,9 @@ set -g mouse on
 # Enable Ctrl+Left/Right to move between words
 set-window-option -g xterm-keys on
 
+# scrollback size
+set -g history-limit 5000
+
 ######################
 ### DESIGN CHANGES ###
 ######################
