@@ -3,4 +3,4 @@
 # Go back to the master branch, do a git pull and delete merged local branches
 # Meant for when you are done working on a feature branch and have just merged it
 
-git checkout master && git pull && git-delete-local-merged
+git checkout master && git up && git-delete-local-merged || true
