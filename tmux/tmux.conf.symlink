@@ -31,6 +31,9 @@ set-window-option -g xterm-keys on
 # scrollback size
 set -g history-limit 5000
 
+# colour scheme
+set -g default-terminal "screen-256-color"
+
 ######################
 ### DESIGN CHANGES ###
 ######################
