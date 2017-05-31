@@ -172,9 +172,10 @@ bar {
 bindsym $mod+Shift+x exec ~/.config/i3/lock.sh 
 
 # default workspaces
-# assign [class="Spotify"] $workspace10
-# assign [class="Skype"] $workspace9
-# assign [class="qTox"] $workspace9
+assign [class="Google-chrome"] $workspace1
+assign [class="X-terminal-emulator"] $workspace2
+assign [class="jetbrains-idea-ce"] $workspace3
+assign [class="Slack"] $workspace4
 
 # workspace default monitors
 workspace $workspace1 output DP-1
