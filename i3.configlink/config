@@ -210,9 +210,10 @@ workspace $workspace9 output DP-1
 workspace $workspace10 output DP-1
 
 # Keys
+exec --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space_toggle"
 exec_always xmodmap -e 'clear lock' -e 'keycode 0x42 = Escape' # set caps_lock as escape
 
 # Startup
 exec_always ~/.config/i3/screenlayout.sh
-exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+exec --no-startup-id compton --config ~/.config/i3/compton.conf
 
