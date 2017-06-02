@@ -32,7 +32,7 @@ set-window-option -g xterm-keys on
 set -g history-limit 5000
 
 # colour scheme
-set -g default-terminal "screen-256-color"
+set -g default-terminal "xterm-256color"
 
 ######################
 ### DESIGN CHANGES ###
