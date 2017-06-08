@@ -214,8 +214,8 @@ exec --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space
 exec_always xmodmap -e 'clear lock' -e 'keycode 0x42 = Escape' # set caps_lock as escape
 
 # Multimedia keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute && amixer -q -D pulse set Master 1+ on && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute && amixer -q -D pulse set Master 1+ on && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle && pkill -RTMIN+1 i3blocks
 
 # Startup
