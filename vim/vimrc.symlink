@@ -27,7 +27,6 @@ set incsearch             " Highlight search results when typing
 set hlsearch              " Highlight search results
 
 " -- Beep
-set visualbell            " Prevent Vim from beeping
 set noerrorbells          " Prevent Vim from beeping
 
 " -- Backspace behaves as expected
