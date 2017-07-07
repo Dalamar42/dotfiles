@@ -10,5 +10,8 @@ atom.symlink/blob-store
 git/gitconfig.symlink
 
 fish.configlink/fish_history
+fish.configlink/fish_read_history
 fish.configlink/fishd.*
 fish.configlink/functions
+
+vim/vim.symlink/.netrwhist
