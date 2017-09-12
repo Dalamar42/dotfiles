@@ -9,6 +9,7 @@ call pathogen#infect()
 
 " -- Display
 set title                 " Update the title of your window or your terminal
+set relativenumber        " Display relative line numbers
 set number                " Display line numbers
 set ruler                 " Display cursor position
 set nowrap                " Do not wrap lines when they are too long
