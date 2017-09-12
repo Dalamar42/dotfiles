@@ -3,7 +3,6 @@ set ignorecase            " Ignore case when searching
 set smartcase             " If there is an uppercase in your search term search case sensitive again
 set incsearch             " Highlight search results when typing
 set hlsearch              " Highlight search results
-set relativenumber        " Show relative line numbers
 set number                " Show line numbers
 
 " -- Rebind navigation to a wasd like ijkl
