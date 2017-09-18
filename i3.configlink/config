@@ -192,6 +192,7 @@ bar {
 
 # lock
 bindsym $mod+Shift+x exec ~/.config/i3/lock.sh 
+bindsym XF86Sleep exec ~/.config/i3/lock.sh
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
