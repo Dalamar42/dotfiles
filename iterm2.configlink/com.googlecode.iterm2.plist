@@ -69,11 +69,13 @@
 	<key>HotKeyTogglesWindow</key>
 	<true/>
 	<key>Hotkey</key>
-	<true/>
+	<false/>
 	<key>HotkeyChar</key>
-	<integer>167</integer>
+	<integer>0</integer>
 	<key>HotkeyCode</key>
-	<integer>10</integer>
+	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>1048840</integer>
 	<key>IRMemory</key>
@@ -128,10 +130,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 495 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>389 225 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 78 1680 949 0 0 1680 1027 </string>
+	<string>0 82 1680 945 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_6D22643F-373A-4B36-A7CD-24B45422EC00</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -1109,10 +1113,30 @@
 			</dict>
 			<key>Guid</key>
 			<string>11B60605-022D-42FC-BF2C-A63163703EDD</string>
+			<key>Has Hotkey</key>
+			<true/>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>HotKey Characters</key>
+			<string>§</string>
+			<key>HotKey Characters Ignoring Modifiers</key>
+			<string>§</string>
+			<key>HotKey Key Code</key>
+			<integer>10</integer>
+			<key>HotKey Modifier Flags</key>
+			<integer>1048840</integer>
+			<key>HotKey Window Animates</key>
+			<true/>
+			<key>HotKey Window AutoHides</key>
+			<true/>
+			<key>HotKey Window Dock Click Action</key>
+			<integer>0</integer>
+			<key>HotKey Window Floats</key>
+			<false/>
+			<key>HotKey Window Reopens On Activation</key>
+			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -1601,6 +1625,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>6F4861CC-6646-41EE-99E5-C2D3AC1661C8</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>513126937.54220098</real>
 	<key>OnlyWhenMoreTabs</key>
@@ -1611,6 +1637,8 @@
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
@@ -1652,6 +1680,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/thomas/.dotfiles/iterm2.configlink</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1669,13 +1699,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-09T13:40:52Z</date>
+	<date>2017-09-20T23:37:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -1717,7 +1749,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.0</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
