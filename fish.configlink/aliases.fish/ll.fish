@@ -4,7 +4,7 @@ if which gls > /dev/null
   end
 else
   function ll
-    command ls -l --color=auto $argv
+    command ls -lh --color=auto $argv
   end
 end
 
