@@ -26,6 +26,7 @@
     cf = show --name-only # e.g. git cf <commit>, show the files changed in a commit.
     spull = !git submodule foreach --recursive git checkout master && git pull && git submodule update --remote --rebase
     spush = !git submodule foreach --recursive git checkout master && git push --recurse-submodules=check
+    show-files = show --pretty="" --name-only
 [color]
     diff = auto
     status = auto
