@@ -12,3 +12,6 @@ noremap k j
 noremap h i
 noremap <space> i
 
+" -- Do not yank when pasting
+vnoremap p "_dP
+
