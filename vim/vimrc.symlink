@@ -67,3 +67,6 @@ vnoremap p "_dP
 
 " -- Activate lightline
 set laststatus=2
+
+" -- Add shortcut for fzf :Files
+:nmap <C-S-n> :Files<CR>
