@@ -65,3 +65,5 @@ noremap <space> i
 " -- Do not yank when pasting
 vnoremap p "_dP
 
+" -- Activate lightline
+set laststatus=2
