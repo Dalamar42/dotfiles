@@ -7,7 +7,7 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Set OS X defaults
-$DOTFILES/osx/set-defaults.sh
+$DOTFILES/osx/install.sh
 
 # Upgrade homebrew
 brew update

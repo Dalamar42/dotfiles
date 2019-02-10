@@ -21,7 +21,7 @@ fi
 
 brew update
 
-brew upgrade --cleanup
+brew upgrade
 
 # Install homebrew packages
 brew install grc coreutils spark || true
