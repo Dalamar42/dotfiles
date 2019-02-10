@@ -27,6 +27,15 @@ fail () {
   exit
 }
 
+require_util () {
+    type "$1" > /dev/null 2>&1 || command -v "$1" > /dev/null 2>&1 ||
+        fail "You do not have '$1' installed"
+}
+
+check_requirements () {
+    require_util stow
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
@@ -127,6 +136,13 @@ link_file () {
   fi
 }
 
+link_stow () {
+  local src="${1}"
+  local package="$(basename ${src})"
+  stow -d "${DOTFILES_ROOT}" -t "${HOME}" -S "${package}"
+  success "stowed ${src}"
+}
+
 install_dotfiles () {
   info 'installing dotfiles'
 
@@ -151,9 +167,20 @@ install_config_dotfiles () {
   done
 }
 
+install_stow_dotfiles () {
+    info 'install dotfiles via stow'
+
+    for src in $(find "${DOTFILES_ROOT}" -maxdepth 2 -name '*.stow')
+    do
+      link_stow "${src}"
+    done
+}
+
+check_requirements
 setup_gitconfig
 install_dotfiles
 install_config_dotfiles
+install_stow_dotfiles
 
 echo ''
 echo '  All installed!'
