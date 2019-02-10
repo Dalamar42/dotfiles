@@ -1,11 +1,11 @@
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/packages
-atom.symlink/storage
-atom.symlink/themes
-atom.symlink/compile-cache
-atom.symlink/.apm
-atom.symlink/blob-store
+atom.stow/.atom/.node-gyp
+atom.stow/.atom/.storage
+atom.stow/.atom/packages
+atom.stow/.atom/storage
+atom.stow/.atom/themes
+atom.stow/.atom/compile-cache
+atom.stow/.atom/.apm
+atom.stow/.atom/blob-store
 
 git/gitconfig.symlink
 
