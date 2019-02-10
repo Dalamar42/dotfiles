@@ -9,9 +9,10 @@ atom.stow/.atom/blob-store
 
 git/gitconfig.symlink
 
-fish.configlink/fish_history
-fish.configlink/fish_read_history
-fish.configlink/fishd.*
-fish.configlink/functions
+fish.stow/.config/fish/fish_history
+fish.stow/.config/fish/fish_read_history
+fish.stow/.config/fish/fish_variables
+fish.stow/.config/fish/fishd.784f436e8649
+fish.stow/.config/fish/functions
 
 vim/vim.symlink/.netrwhist
