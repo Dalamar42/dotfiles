@@ -139,7 +139,7 @@ link_file () {
 link_stow () {
   local src="${1}"
   local package="$(basename ${src})"
-  stow -d "${DOTFILES_ROOT}" -t "${HOME}" -S "${package}"
+  stow -d "${DOTFILES_ROOT}" -t "${HOME}" -S "${package}" || fail "failed to stow ${src}"
   success "stowed ${src}"
 }
 
