@@ -7,7 +7,7 @@ atom.stow/.atom/compile-cache
 atom.stow/.atom/.apm
 atom.stow/.atom/blob-store
 
-git/gitconfig.symlink
+git.stow/.gitconfig
 
 fish.stow/.config/fish/fish_history
 fish.stow/.config/fish/fish_read_history

@@ -37,7 +37,7 @@ check_requirements () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  if ! [ -f git.stow/.gitconfig ]
   then
     info 'setup gitconfig'
 
@@ -55,7 +55,7 @@ setup_gitconfig () {
     sed -e "s/AUTHORNAME/$git_authorname/g" \
       -e "s/AUTHOREMAIL/$git_authoremail/g" \
       -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" \
-      git/gitconfig.symlink.example > git/gitconfig.symlink
+      git.stow/.gitconfig.template > git.stow/.gitconfig
 
     success 'gitconfig'
   fi
