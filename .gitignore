@@ -15,4 +15,4 @@ fish.stow/.config/fish/fish_variables
 fish.stow/.config/fish/fishd.784f436e8649
 fish.stow/.config/fish/functions
 
-vim/vim.symlink/.netrwhist
+vim.stow/.vim/.netrwhist

@@ -1,16 +1,16 @@
 [submodule "vim/vim.symlink/bundle/fzf"]
-	path = vim/vim.symlink/bundle/fzf
+	path = vim.stow/.vim/bundle/fzf
 	url = https://github.com/junegunn/fzf.git
 	branch = master
 [submodule "vim/vim.symlink/bundle/fzf.vim"]
-	path = vim/vim.symlink/bundle/fzf.vim
+	path = vim.stow/.vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 	branch = master
 [submodule "vim/vim.symlink/bundle/lightline.vim"]
-	path = vim/vim.symlink/bundle/lightline.vim
+	path = vim.stow/.vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
 	branch = master
 [submodule "vim/vim.symlink/bundle/vim-gitgutter"]
-	path = vim/vim.symlink/bundle/vim-gitgutter
+	path = vim.stow/.vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	branch = master
