@@ -1,18 +1,18 @@
-atom.stow/.atom/.node-gyp
-atom.stow/.atom/.storage
-atom.stow/.atom/packages
-atom.stow/.atom/storage
-atom.stow/.atom/themes
-atom.stow/.atom/compile-cache
-atom.stow/.atom/.apm
-atom.stow/.atom/blob-store
+stow/atom/.atom/.node-gyp
+stow/atom/.atom/.storage
+stow/atom/.atom/packages
+stow/atom/.atom/storage
+stow/atom/.atom/themes
+stow/atom/.atom/compile-cache
+stow/atom/.atom/.apm
+stow/atom/.atom/blob-store
 
-git.stow/.gitconfig
+stow/git/.gitconfig
 
-fish.stow/.config/fish/fish_history
-fish.stow/.config/fish/fish_read_history
-fish.stow/.config/fish/fish_variables
-fish.stow/.config/fish/fishd.784f436e8649
-fish.stow/.config/fish/functions
+stow/fish/.config/fish/fish_history
+stow/fish/.config/fish/fish_read_history
+stow/fish/.config/fish/fish_variables
+stow/fish/.config/fish/fishd.784f436e8649
+stow/fish/.config/fish/functions
 
-vim.stow/.vim/.netrwhist
+stow/vim/.vim/.netrwhist

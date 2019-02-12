@@ -20,12 +20,11 @@ if test -f ~/.localrc
 end
 
 # load the path files
-for file in $DOTFILES/**/path.fish
+for file in ~/.config/fish/paths.fish/*.fish
   source $file
 end
 
 # load aliases
-for file in $DOTFILES/**/aliases.fish/*.fish
+for file in ~/.config/fish/aliases.fish/*.fish
   source $file
 end
-
