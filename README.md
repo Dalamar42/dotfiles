@@ -27,23 +27,6 @@ Everything is configured and tweaked within `~/.dotfiles`.
 The main file you'll want to change right off the bat is `fish/config.fish`,
 which sets up a few paths that'll be different on your particular machine.
 
-`dot` is a simple script that installs some dependencies, sets sane OS X
-defaults, and so on. Tweak this script, and occasionally run `dot` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
-
-## topical
-
-Everything's built around topic areas. If you're adding a new area to your
-forked dotfiles — say, "Java" — you can simply add a `java` directory and put
-files in there. Anything with an extension of `.symlink` will get
-symlinked without extension into `$HOME` when you run `script/bootstrap`.
-Similarly anything with an extension of `.configlink` will get symlinked
-without extension under `$HOME/.config` when you run `script/boostrap`.
-Anything named `path.fish` will be expected to configure PATH and will be 
-added to your shell. Any directory named `aliases.fish` will be expected to
-contain files that setup aliases and will also be added to the shell.
-
 ## what's inside
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
@@ -55,21 +38,15 @@ use, and build on what you do use.
 
 There's a few special files in the hierarchy.
 
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
-  available everywhere.
-- **topic/path.fish**: Any file named `path.fish` is loaded first and is
-  expected to setup `$PATH` or similar.
-- **topic/aliases.fish/*.fish**: Any such files are expected to setup aliases.
-- **topic/\*.symlink**: Any files ending in `*.symlink` get symlinked into
-  your `$HOME`. This is so you can keep all of those versioned in your dotfiles
-  but still keep those autoloaded files in your home directory. These get
-  symlinked in when you run `script/bootstrap`.
-- **topic/\*.configlink**: Any files ending in `*.symlink` get symlinked into
-  your `$HOME/.config`. This is so you can keep all of those versioned in your 
-  dotfiles but still keep those autoloaded files in your home directory. These get
-  symlinked in when you run `script/bootstrap`.
-- **topic/install.sh**: This is expected to be an installer for the respective
-  topic and will be invoked by `script/install`
+- **bin/**: Anything in `bin/` will get added to your `$PATH`
+- **nix/**: This contains the nix configuration.
+- **nix/bin**: Anything in the nix `bin/` will get added to your `$PATH`
+- **stow/**: This contains the files that will be symlinked to `$HOME`
+- **stow/fish/.config/fish/aliases.fish**: The files here are expected to
+  setup aliases
+- **stow/fish/.config/fish/paths.fish**: The files here are expected to add
+  entries to `$PATH`
+- **install/**: Contains various topical installation scripts
 
 ## bugs
 
