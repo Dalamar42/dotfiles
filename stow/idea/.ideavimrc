@@ -4,6 +4,8 @@ set smartcase             " If there is an uppercase in your search term search 
 set incsearch             " Highlight search results when typing
 set hlsearch              " Highlight search results
 set number                " Show line numbers
+set visualbell            " Disable bell sounds
+set noerrorbells
 
 " -- Rebind navigation to a wasd like ijkl
 noremap j h
