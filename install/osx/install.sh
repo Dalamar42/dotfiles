@@ -1,100 +1,136 @@
 #!/usr/bin/env bash
 
-# Sets reasonable OS X defaults.
-#
-# Or, in other words, set shit how I like in OS X.
-#
-# The original idea (and a couple settings) were grabbed from:
-#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
-#
-# Many of the customisations are from:
-#   https://www.learningosx.com/101-ways-to-tweak-os-x-using-terminal/
-#
-# Run ./install.sh and you'll be good to go.
-
 set -e
 
-if [ "$(uname -s)" != 'Darwin' ]; then
-    echo 'Not on OS X. Skipping setting OS X defaults...'
-    exit 0
-fi
+info () {
+    printf "  [ \033[00;34m..\033[0m ] $1"
+}
 
-echo 'Setting OS X defaults...'
+success () {
+    printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
 
-# Disable press-and-hold for keys in favor of key repeat.
-defaults write -g ApplePressAndHoldEnabled -bool false
+fail () {
+    printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+    echo ''
+    exit
+}
 
-# Set a really fast key repeat.
-defaults write -g InitialKeyRepeat -int 15
-defaults write NSGlobalDomain KeyRepeat -int 2
+check_is_osx() {
+    if [[ "$(uname -s)" != 'Darwin' ]]; then
+        fail 'Not on OSX'
+    fi
+}
 
-# Use AirDrop over every interface. srsly this should be a default.
-defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+set_osx_defaults() {
+    # Sets reasonable OS X defaults.
+    #
+    # Or, in other words, set shit how I like in OS X.
+    #
+    # The original idea (and a couple settings) were grabbed from:
+    #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+    #
+    # Many of the customisations are from:
+    #   https://www.learningosx.com/101-ways-to-tweak-os-x-using-terminal/
+    info 'Setting OS X defaults...'
 
-# Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+    # Disable press-and-hold for keys in favor of key repeat.
+    defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Show the ~/Library folder.
-chflags nohidden ~/Library
+    # Set a really fast key repeat.
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write NSGlobalDomain KeyRepeat -int 2
 
-# Set the Finder prefs for showing a few different volumes on the Desktop.
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+    # Use AirDrop over every interface. srsly this should be a default.
+    defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
-# Disable the “Are you sure you want to open this application?” dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+    # Always open everything in Finder's list view. This is important.
+    defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
-# Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+    # Show the ~/Library folder.
+    chflags nohidden ~/Library
 
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+    # Set the Finder prefs for showing a few different volumes on the Desktop.
+    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+    defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-# Run the screensaver if we're in the bottom-left hot corner.
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
+    # Disable the “Are you sure you want to open this application?” dialog
+    defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+    # Disable “natural” (Lion-style) scrolling
+    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+    # Disable auto-correct
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+    # Run the screensaver if we're in the bottom-left hot corner.
+    defaults write com.apple.dock wvous-bl-corner -int 5
+    defaults write com.apple.dock wvous-bl-modifier -int 0
 
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    # Require password immediately after sleep or screen saver begins
+    defaults write com.apple.screensaver askForPassword -int 1
+    defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Avoid creating .DS_Store files on network volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    # Finder: show all filename extensions
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Disable disk image verification
-# defaults write com.apple.frameworks.diskimages skip-verify -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+    # Display full POSIX path as Finder window title
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Use list view in all Finder windows by default
-# You can set the other view modes by using one of these four-letter codes: icnv, clmv, Flwv
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+    # Disable the warning when changing a file extension
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Set the icon size of Dock items to 36 pixels
-# defaults write com.apple.dock tilesize -int 36
+    # Avoid creating .DS_Store files on network volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Show indicator lights for open applications in the Dock
-# defaults write com.apple.dock show-process-indicators -bool true
+    # Disable disk image verification
+    # defaults write com.apple.frameworks.diskimages skip-verify -bool true
+    # defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+    # defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
-# Disable the Genius sidebar in iTunes
-defaults write com.apple.iTunes disableGeniusSidebar -bool true
+    # Use list view in all Finder windows by default
+    # You can set the other view modes by using one of these four-letter codes: icnv, clmv, Flwv
+    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-# Disable the Ping sidebar in iTunes
-defaults write com.apple.iTunes disablePingSidebar -bool true
+    # Set the icon size of Dock items to 36 pixels
+    # defaults write com.apple.dock tilesize -int 36
 
-# Disable all the other Ping stuff in iTunes
-defaults write com.apple.iTunes disablePing -bool true
+    # Show indicator lights for open applications in the Dock
+    # defaults write com.apple.dock show-process-indicators -bool true
 
-# Don’t automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+    # Disable the Genius sidebar in iTunes
+    defaults write com.apple.iTunes disableGeniusSidebar -bool true
 
-echo 'OS X defaults set...'
+    # Disable the Ping sidebar in iTunes
+    defaults write com.apple.iTunes disablePingSidebar -bool true
+
+    # Disable all the other Ping stuff in iTunes
+    defaults write com.apple.iTunes disablePing -bool true
+
+    # Don’t automatically rearrange Spaces based on most recent use
+    defaults write com.apple.dock mru-spaces -bool false
+
+    success 'OS X defaults set...'
+}
+
+set_osx_shell() {
+    SHELL_PATH="${HOME}/.nix-profile/bin/fish"
+    info "Setting shell to ${SHELL_PATH}"
+
+    if [[ ! -f "${SHELL_PATH}" ]]; then
+        fail "Unable to find ${SHELL_PATH}. Exiting..."
+        exit 1
+    fi
+
+    sudo bash -c "grep -q ${SHELL_PATH} /etc/shells || sudo echo ${SHELL_PATH} >> /etc/shells"
+    if [[ "$SHELL" != ""${SHELL_PATH} ]]; then
+        chsh -s ${SHELL_PATH}
+        success 'Shell set...'
+    else
+        success 'Shell was already set...'
+    fi
+}
+
+check_is_osx
+set_osx_defaults
+set_osx_shell

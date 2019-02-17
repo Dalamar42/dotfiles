@@ -10,6 +10,9 @@ set -x EDITOR vim
 # add the dotfiles bin dir to path
 set -x PATH $PATH $DOTFILES/bin
 
+# add the nix bin dir to path
+set -x PATH $PATH $DOTFILES/nix/bin
+
 # set greeting message
 set fish_greeting ""
 

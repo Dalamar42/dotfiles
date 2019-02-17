@@ -1,0 +1,5 @@
+#!/bin/bash
+NIX_PROFILE="$( cd "$(dirname "$0")/.." ; pwd -P )"
+
+nix-shell --packages nix-prefetch-git \
+          --command "nix-prefetch-git https://github.com/NixOS/nixpkgs-channels > ${NIX_PROFILE}/nixpkgs.json"

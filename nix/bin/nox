@@ -1,0 +1,4 @@
+#!/bin/bash
+NIX_PROFILE="$( cd "$(dirname "$0")/.." ; pwd -P )"
+
+nix-env --file "${NIX_PROFILE}/packages.nix" "$@"
