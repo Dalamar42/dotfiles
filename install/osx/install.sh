@@ -2,15 +2,15 @@
 
 set -e
 
-info () {
+info() {
     printf "  [ \033[00;34m..\033[0m ] $1"
 }
 
-success () {
+success() {
     printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
 
-fail () {
+fail() {
     printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
     echo ''
     exit
@@ -114,7 +114,7 @@ set_osx_defaults() {
 }
 
 set_osx_shell() {
-    SHELL_PATH="${HOME}/.nix-profile/bin/fish"
+    local SHELL_PATH="${HOME}/.nix-profile/bin/fish"
     info "Setting shell to ${SHELL_PATH}"
 
     if [[ ! -f "${SHELL_PATH}" ]]; then

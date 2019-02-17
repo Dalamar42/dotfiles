@@ -8,34 +8,34 @@ set -e
 
 echo ''
 
-info () {
+info() {
     printf "  [ \033[00;34m..\033[0m ] $1"
 }
 
-user () {
+user() {
     printf "\r  [ \033[0;33m?\033[0m ] $1 "
 }
 
-success () {
+success() {
     printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
 
-fail () {
+fail() {
     printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
     echo ''
     exit
 }
 
-require_util () {
+require_util() {
     type "$1" > /dev/null 2>&1 || command -v "$1" > /dev/null 2>&1 ||
         fail "You do not have '$1' installed"
 }
 
-check_requirements () {
+check_requirements() {
     require_util stow
 }
 
-setup_gitconfig () {
+setup_gitconfig() {
     if ! [[ -f "${STOW_DIR}/git/.gitconfig" ]]
     then
         info 'setup gitconfig'
@@ -60,7 +60,7 @@ setup_gitconfig () {
   fi
 }
 
-link_stow () {
+link_stow() {
     local SRC="${1}"
     local DIR="$(dirname ${SRC})"
     local PACKAGE="$(basename ${SRC})"
@@ -69,7 +69,7 @@ link_stow () {
 }
 
 
-install_dotfiles () {
+install_dotfiles() {
     info 'installing dotfiles'
 
     for SRC in $(find "${STOW_DIR}" -maxdepth 1 -type d)
