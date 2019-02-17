@@ -16,7 +16,7 @@ These dotfiles for use with the Fish shell.
 Run this:
 
 ```sh
-git clone https://github.com/tfm/dotfiles.git ~/.dotfiles
+git clone https://github.com/Dalamar42/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
