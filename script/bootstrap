@@ -72,7 +72,7 @@ link_stow() {
 install_dotfiles() {
     info 'installing dotfiles'
 
-    for SRC in $(find "${STOW_DIR}" -maxdepth 1 -type d)
+    for SRC in $(find "${STOW_DIR}" -maxdepth 1 -type d -not -path "*/stow")
     do
       link_stow "${SRC}"
     done
