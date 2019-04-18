@@ -31,6 +31,10 @@ let
    
     # Dotfiles
     stow
+
+    # Fix for locales issue
+    # https://github.com/NixOS/nix/issues/599
+    glibcLocales
   ];
   linuxPkgs = [
     # Dev
