@@ -1,0 +1,5 @@
+bind main I previous
+bind main K next
+
+bind generic i move-up
+bind generic k move-down

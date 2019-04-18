@@ -10,6 +10,7 @@ let
     rustup
     vim
     git
+    tig
    
     # Shell
     fish
