@@ -6,5 +6,67 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "debug.inlineValues": true,
     "debug.toolBarLocation": "docked",
-    "terminal.external.osxExec": "iterm.app"
+    "terminal.external.osxExec": "iterm.app",
+
+    // Rust
+    "rust-client.channel": "nightly",
+
+    // Vim Plugin
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "after": ["i"]
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["i"],
+            "after": ["k"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "after": ["i"]
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["i"],
+            "after": ["k"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        },
+        // Do not yank when pasting
+        {
+            "before": ["p"],
+            "after": ["\"", "_", "d", "P"]
+        }
+    ],
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+
+    // Spell check
+    "cSpell.userWords": [
+        "deserialised",
+        "serialised"
+    ],
+    "vs-kubernetes": {
+        "vs-kubernetes.draft-path": "/Users/thomas/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+        "vs-kubernetes.helm-path": "/Users/thomas/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.minikube-path": "/Users/thomas/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    }
 }

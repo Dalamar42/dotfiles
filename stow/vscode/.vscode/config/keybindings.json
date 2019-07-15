@@ -17,5 +17,21 @@
     {
         "key": "cmd+b",
         "command": "-workbench.action.toggleSidebarVisibility"
-    }
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
+    },
 ]
