@@ -1,0 +1,10 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "debug.inlineValues": true,
+    "debug.toolBarLocation": "docked",
+    "terminal.external.osxExec": "iterm.app"
+}
