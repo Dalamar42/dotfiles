@@ -7,9 +7,13 @@
     "debug.inlineValues": true,
     "debug.toolBarLocation": "docked",
     "terminal.external.osxExec": "iterm.app",
+    "keyboard.dispatch": "keyCode",
 
     // Rust
     "rust-client.channel": "nightly",
+
+    // Python
+    "python.jediEnabled": true,
 
     // Vim Plugin
     "vim.insertModeKeyBindingsNonRecursive": [],
@@ -68,5 +72,5 @@
         "vs-kubernetes.draft-path": "/Users/thomas/.vs-kubernetes/tools/draft/darwin-amd64/draft",
         "vs-kubernetes.helm-path": "/Users/thomas/.vs-kubernetes/tools/helm/darwin-amd64/helm",
         "vs-kubernetes.minikube-path": "/Users/thomas/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-    }
+    },
 }
