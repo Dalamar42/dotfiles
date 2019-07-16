@@ -52,4 +52,18 @@
         "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
     },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+tab",
+        "command": "-workbench.action.focusNextGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+`",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
 ]
