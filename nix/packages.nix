@@ -7,7 +7,6 @@ let
    
     # Dev
     tldr
-    rustup
     vim
     git
     tig
