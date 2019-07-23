@@ -1,6 +1,7 @@
 {
     "files.autoSave": "afterDelay",
     "editor.suggestSelection": "first",
+    "editor.parameterHints.enabled": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -8,9 +9,14 @@
     "debug.toolBarLocation": "docked",
     "terminal.external.osxExec": "iterm.app",
     "keyboard.dispatch": "keyCode",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
 
     // Rust
     "rust-client.channel": "nightly",
+    "rust-client.nestedMultiRootConfigInOutermost": false,
+    "rust.build_on_save": true,
+    "rust.clippy_preference": "on",
 
     // Python
     "python.jediEnabled": true,
@@ -19,43 +25,82 @@
     "vim.insertModeKeyBindingsNonRecursive": [],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "after": ["i"]
+            "before": [
+                "<space>"
+            ],
+            "after": [
+                "i"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["h"]
+            "before": [
+                "j"
+            ],
+            "after": [
+                "h"
+            ]
         },
         {
-            "before": ["i"],
-            "after": ["k"]
+            "before": [
+                "i"
+            ],
+            "after": [
+                "k"
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["j"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "j"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "after": ["i"]
+            "before": [
+                "<space>"
+            ],
+            "after": [
+                "i"
+            ]
         },
         {
-            "before": ["j"],
-            "after": ["h"]
+            "before": [
+                "j"
+            ],
+            "after": [
+                "h"
+            ]
         },
         {
-            "before": ["i"],
-            "after": ["k"]
+            "before": [
+                "i"
+            ],
+            "after": [
+                "k"
+            ]
         },
         {
-            "before": ["k"],
-            "after": ["j"]
+            "before": [
+                "k"
+            ],
+            "after": [
+                "j"
+            ]
         },
         // Do not yank when pasting
         {
-            "before": ["p"],
-            "after": ["\"", "_", "d", "P"]
+            "before": [
+                "p"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "P"
+            ]
         }
     ],
     "vim.ignorecase": true,
@@ -63,14 +108,29 @@
     "vim.incsearch": true,
     "vim.hlsearch": true,
 
-    // Spell check
-    "cSpell.userWords": [
-        "deserialised",
-        "serialised"
-    ],
+    // Kubernetes
     "vs-kubernetes": {
         "vs-kubernetes.draft-path": "/Users/thomas/.vs-kubernetes/tools/draft/darwin-amd64/draft",
         "vs-kubernetes.helm-path": "/Users/thomas/.vs-kubernetes/tools/helm/darwin-amd64/helm",
         "vs-kubernetes.minikube-path": "/Users/thomas/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
     },
+
+    // Trigger task on save
+    "triggerTaskOnSave.tasks": {
+        "check": [
+            "**/*.rs"
+        ],
+    },
+    "triggerTaskOnSave.showNotifications": false,
+    "triggerTaskOnSave.restart": true,
+
+    // Spell check
+    "cSpell.userWords": [
+        "capnp",
+        "deserialised",
+        "initialised",
+        "proto",
+        "serialisation",
+        "serialised"
+    ],
 }

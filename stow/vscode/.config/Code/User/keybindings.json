@@ -19,7 +19,7 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "alt+l",
         "command": "workbench.action.nextEditor"
     },
     {
@@ -27,7 +27,7 @@
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "ctrl+shift+j",
+        "key": "alt+j",
         "command": "workbench.action.previousEditor"
     },
     {
@@ -65,5 +65,76 @@
     {
         "key": "alt+`",
         "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "alt+f4",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+f4",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "alt+j",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "-toggleFindInSelection",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "-keybindings.editor.recordSearchKeys",
+        "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+        "key": "down",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "down",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+i",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "up",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "python.refactorExtractVariable"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-editor.action.codeAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "python.refactorExtractMethod"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "-editor.action.codeAction",
+        "when": "editorTextFocus"
     },
 ]
