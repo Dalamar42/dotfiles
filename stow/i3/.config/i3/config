@@ -209,7 +209,8 @@ workspace $workspace3 output DP-1
 workspace $workspace4 output DP-1 
 workspace $workspace5 output DP-1 
 workspace $workspace6 output DP-1 
-workspace $workspace9 output DP-1 
+workspace $workspace8 output HDMI-1
+workspace $workspace9 output DP-1
 workspace $workspace10 output DP-1
 
 # Keys
