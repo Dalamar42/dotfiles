@@ -199,6 +199,7 @@ assign [class="Google-chrome"] $workspace1
 assign [class="X-terminal-emulator"] $workspace2
 assign [class="jetbrains-idea-ce" window_type="normal"] $workspace3
 assign [class="jetbrains-idea" window_type="normal"] $workspace3
+assign [class="Code" window_type="normal"] $workspace3
 assign [class="Slack"] $workspace4
 assign [class="Insomnia"] $workspace5
 
