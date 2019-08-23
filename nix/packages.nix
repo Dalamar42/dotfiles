@@ -1,4 +1,6 @@
-with import ./nixpkgs.nix {};
+with import ./nixpkgs.nix {
+    config.allowUnfree = true;
+};
 let
   commonPkgs = [
     # Nix
@@ -10,6 +12,7 @@ let
     vim
     git
     tig
+    vscode
    
     # Shell
     fish
