@@ -11,6 +11,7 @@
     "keyboard.dispatch": "keyCode",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": -1,
 
     // Rust
     "rust-client.channel": "nightly",
@@ -133,5 +134,4 @@
         "serialisation",
         "serialised"
     ],
-    "window.zoomLevel": 0,
 }
