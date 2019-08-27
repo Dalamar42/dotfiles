@@ -1,11 +1,26 @@
 " VIM Configuration
 " Adapted from https://github.com/vjousse/vim-for-humans/blob/master/en/syntaxhighlight/vimrc
 
+
+" -- Install vim.plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" -- Install plugins
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-sensible'
+call plug#end()
+
 " -- Cancel compatibility with Vi
 set nocompatible
-
-" -- Activate pathogen
-call pathogen#infect()
 
 " -- Display
 set title                 " Update the title of your window or your terminal

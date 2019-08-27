@@ -17,3 +17,5 @@ stow/fish/.config/fish/functions
 stow/fish/.config/fish/fishd.*
 
 stow/vim/.vim/.netrwhist
+stow/vim/.vim/autoload
+stow/vim/.vim/plugged
