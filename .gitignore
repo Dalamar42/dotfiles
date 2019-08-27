@@ -19,3 +19,7 @@ stow/fish/.config/fish/fishd.*
 stow/vim/.vim/.netrwhist
 stow/vim/.vim/autoload
 stow/vim/.vim/plugged
+
+stow/vscode/.config/Code/Cache
+stow/vscode/.config/Code/Cookies
+stow/vscode/.config/Code/logs
