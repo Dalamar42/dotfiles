@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+set -eu
+
+EXIT=false
+
+command_exists() {
+    type "$1" &> /dev/null ;
+}
+
+for command in code ; do
+    if ! command_exists "$command" ; then
+        echo "Please install: $command"
+        EXIT=true
+    fi
+done
+
+if "$EXIT"; then
+    exit 1
+fi
+
+
+ACTION=""
+FORCE=""
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+FREEZE_FILE="${DIR}/extensions.txt"
+
+
+USAGE="Usage $0 {--install,--freeze} [--force]"
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --install )   [[ -n "${ACTION}" ]] && echo "${USAGE}" && exit 1
+                      ACTION="install"
+                      ;;
+        --freeze )    [[ -n "${ACTION}" ]] && echo "${USAGE}" && exit 1
+                      ACTION="freeze"
+                      ;;
+        --force)      [[ -n "${FORCE}" ]] && echo "${USAGE}" && exit 1
+                      FORCE="true"
+                      ;;
+        * )           echo "${USAGE}"
+                      exit 1
+    esac
+    shift
+done
+
+[[ -z "${ACTION}" ]] && echo "${USAGE}" && exit 1
+
+if [[ "${ACTION}" == "freeze" ]]; then
+    echo "Freezing extensions into ${FREEZE_FILE}"
+    code --list-extensions > "${FREEZE_FILE}"
+elif [[ "${ACTION}" == "install" && "${FORCE}" == "true" ]]; then
+    echo "Installing extensions from ${FREEZE_FILE} (force)"
+    cat "${FREEZE_FILE}" | xargs -I {} code --force --install-extension {}
+elif [[ "${ACTION}" == "install" ]]; then
+    echo "Installing extensions from ${FREEZE_FILE}"
+    cat "${FREEZE_FILE}" | xargs -I {} code --install-extension {}
+fi
+
