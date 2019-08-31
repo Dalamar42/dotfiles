@@ -1,9 +1,12 @@
-with import ./nixpkgs.nix {
-    config.allowUnfree = true;
-};
 let
-  commonPkgs = [
+  sources = import ./sources.nix;
+  niv = (import sources.niv {}).niv;
+  nixpkgs = import sources.nixpkgs {
+    config.allowUnfree = true;
+  };
+  commonPkgs = with nixpkgs; [
     # Nix
+    niv
     nix
     cacert
    
@@ -38,13 +41,13 @@ let
     # https://github.com/NixOS/nix/issues/599
     glibcLocales
   ];
-  linuxPkgs = [
+  linuxPkgs = with nixpkgs; [
     # Dev
     kcachegrind
   ];
   darwinPkgs = [];
 in
+  with nixpkgs;
   commonPkgs ++
   (lib.optionals stdenv.isLinux linuxPkgs) ++
   (lib.optionals stdenv.isDarwin darwinPkgs)
-
