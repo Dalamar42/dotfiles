@@ -1,12 +1,3 @@
-stow/atom/.atom/.node-gyp
-stow/atom/.atom/.storage
-stow/atom/.atom/packages
-stow/atom/.atom/storage
-stow/atom/.atom/themes
-stow/atom/.atom/compile-cache
-stow/atom/.atom/.apm
-stow/atom/.atom/blob-store
-
 stow/git/.gitconfig
 
 stow/fish/.config/fish/fish_history
@@ -20,6 +11,7 @@ stow/vim/.vim/.netrwhist
 stow/vim/.vim/autoload
 stow/vim/.vim/plugged
 
-stow/vscode/.config/Code/Cache
-stow/vscode/.config/Code/Cookies
-stow/vscode/.config/Code/logs
+stow/vscode/.config/Code/*
+!stow/vscode/.config/User/settings.json
+!stow/vscode/.config/User/keybindings.json
+!stow/vscode/.config/User/snippets
