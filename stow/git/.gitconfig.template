@@ -10,6 +10,7 @@
     promote = !$DOTFILES/bin/git-promote
     wtf     = !$DOTFILES/bin/git-wtf
     rank-contributors = !$DOTFILES/bin/git-rank-contributors
+    contrib = !$DOTFILES/bin/git-total-contributions
     count   = !git shortlog -sn
     st = status -sb
     ci = commit

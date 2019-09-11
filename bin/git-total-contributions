@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+AUTHOR="${1}"
+[[ -z "${AUTHOR}" ]] && echo "Need to provide a user" && exit 1
+
+TOTAL_COMMITS=$(git shortlog -s -n --all --no-merges | grep "${AUTHOR}" | sed -e 's/^[[:space:]]*//' | cut -f 1)
+STATS=$(git log --author="${AUTHOR}" --pretty=tformat: --numstat)
+
+echo "Total commits: ${TOTAL_COMMITS}"
+echo "${STATS}" | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "Added lines: %s\nRemoved lines: %s\nTotal lines: %s\n", add, subs, loc }'
