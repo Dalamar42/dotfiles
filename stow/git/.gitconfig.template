@@ -28,6 +28,7 @@
     spull = !git submodule foreach --recursive git checkout master && git pull && git submodule update --remote --rebase
     spush = !git submodule foreach --recursive git checkout master && git push --recurse-submodules=check
     show-files = show --pretty="" --name-only
+    lift = !git fetch origin && git rebase origin/master
 [color]
     diff = auto
     status = auto
