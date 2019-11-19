@@ -240,4 +240,5 @@ bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle && pkill -RTM
 # Startup
 exec_always ~/.config/i3/screenlayout.sh
 exec --no-startup-id compton --config ~/.config/i3/compton.conf
+exec xautolock -time 5 -locker '~/.config/i3/lock.sh' &
 
