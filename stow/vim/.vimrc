@@ -5,7 +5,7 @@
 " -- Install vim.plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/2f5f74e5e67f657e9fdac54891a76721bcd3ead3/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
