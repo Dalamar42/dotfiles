@@ -16,6 +16,9 @@ let
     git
     tig
     vscode
+    fd
+    ripgrep
+    bat
    
     # Shell
     fish
