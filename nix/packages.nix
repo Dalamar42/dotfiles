@@ -19,6 +19,9 @@ let
     fd
     ripgrep
     bat
+    hyperfine
+    exa
+    tokei
    
     # Shell
     fish
