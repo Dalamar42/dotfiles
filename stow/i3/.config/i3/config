@@ -230,7 +230,9 @@ workspace $workspace10 output DP-1
 
 # Keys
 exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space_toggle"
-exec_always xmodmap -e 'clear lock' -e 'keycode 0x42 = Escape' # set caps_lock as escape
+
+# Set caps-lock to escape
+exec_always --no-startup-id ~/.config/i3/caps_lock.sh
 
 # Multimedia keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute && amixer -q -D pulse set Master 1+ on && pkill -RTMIN+1 i3blocks
