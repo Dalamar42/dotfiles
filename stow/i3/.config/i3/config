@@ -235,9 +235,9 @@ exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:al
 exec_always --no-startup-id ~/.config/i3/caps_lock.sh
 
 # Multimedia keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute && amixer -q -D pulse set Master 1+ on && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute && amixer -q -D pulse set Master 1+ on && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse set Master 1+ toggle && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/audio/increase-volume && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec ~/.config/i3/audio/decrease-volume && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec ~/.config/i3/audio/toggle-mute && pkill -RTMIN+1 i3blocks
 
 # Startup
 exec_always ~/.config/i3/screenlayout.sh

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+MUTED=`pacmd list-sinks | grep -A 15 '* index' | awk '/muted: /{print $2}'`
+VOLUME=`pacmd list-sinks | grep -A 15 '* index' | awk '/volume: front/{ print $5 }' | sed 's/[%|,]//g'`
+
+if [ 'yes' = "$MUTED" ]; then
+    echo 'mute'
+else
+    echo $VOLUME
+fi
+
