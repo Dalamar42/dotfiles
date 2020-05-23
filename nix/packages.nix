@@ -43,9 +43,6 @@ let
     # Dotfiles
     stow
 
-    # Window manager
-    i3
-
     # Fix for locales issue
     # https://github.com/NixOS/nix/issues/599
     glibcLocales

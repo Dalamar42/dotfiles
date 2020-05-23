@@ -41,12 +41,17 @@ Install software with
 nix/bin/nox -i
 ```
 
-This will also install [fish] and [i3].
+This will also install [fish].
 
 ### Switching to fish
 Set `fish` as the default shell by following the instructions in [fish-default].
 If you installed `fish` via `nix` in the previous step `fish` will not be in
 `/usr/local/bin/fish`. Use `which fish` to find the correct path.
+
+### Install i3
+- Install [i3]
+- Install [rofi] application launcher
+- Install [i3blocks] status bar
 
 ## Components
 
@@ -79,3 +84,5 @@ inspired from Ryan's original project."
 [fish]: https://fishshell.com/
 [fish-default]: https://fishshell.com/docs/current/index.html#default-shell
 [i3]: https://i3wm.org/
+[rofi]: https://github.com/davatorium/rofi
+[i3blocks]: https://github.com/vivien/i3blocks
