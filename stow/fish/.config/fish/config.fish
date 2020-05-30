@@ -13,6 +13,9 @@ set -x PATH $PATH $DOTFILES/bin
 # add the nix bin dir to path
 set -x PATH $PATH $DOTFILES/nix/bin
 
+# fix for https://github.com/NixOS/nix/issues/599
+set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive
+
 # set greeting message
 set fish_greeting ""
 
