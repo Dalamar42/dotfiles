@@ -39,7 +39,6 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi \
     -show run \
     -lines 3 \
-    -monitor 1 \
     -eh 2 \
     -width 100 \
     -padding 640 \
@@ -218,15 +217,15 @@ assign [class="Slack"] $workspace4
 assign [class="Insomnia"] $workspace5
 
 # workspace default monitors
-workspace $workspace1 output DP-1
-workspace $workspace2 output DP-2
-workspace $workspace3 output DP-1 
-workspace $workspace4 output DP-1 
-workspace $workspace5 output DP-1 
-workspace $workspace6 output DP-1 
-workspace $workspace8 output HDMI-1
-workspace $workspace9 output DP-1
-workspace $workspace10 output DP-1
+workspace $workspace1 output DisplayPort-0
+workspace $workspace2 output HDMI-A-0
+workspace $workspace3 output DisplayPort-0
+workspace $workspace4 output DisplayPort-0
+workspace $workspace5 output DisplayPort-0
+workspace $workspace6 output DisplayPort-0
+workspace $workspace8 output DisplayPort-0
+workspace $workspace9 output DisplayPort-0
+workspace $workspace10 output DisplayPort-0
 
 # Keys
 exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space_toggle"
