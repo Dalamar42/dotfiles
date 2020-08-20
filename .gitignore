@@ -4,8 +4,9 @@ stow/fish/.config/fish/fish_history
 stow/fish/.config/fish/fish_read_history
 stow/fish/.config/fish/fish_variables
 stow/fish/.config/fish/fishd.784f436e8649
-stow/fish/.config/fish/functions
+stow/fish/.config/fish/functions/*
 stow/fish/.config/fish/fishd.*
+!stow/fish/.config/fish/functions/nvm.fish
 
 stow/vim/.vim/.netrwhist
 stow/vim/.vim/autoload
