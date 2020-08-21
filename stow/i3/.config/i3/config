@@ -12,8 +12,8 @@
 set $mod Mod4
 
 # Monitors
-set $primaryMonitor "DP-3"
-set $secondaryMonitor "eDP-1"
+set $desktopLeft "HDMI-A-0"
+set $laptop "eDP-1"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -221,16 +221,16 @@ assign [class="Slack"] $workspace4
 assign [class="Insomnia"] $workspace5
 
 # workspace default monitors
-workspace $workspace1 output $primaryMonitor
-workspace $workspace2 output $primaryMonitor
-workspace $workspace3 output $primaryMonitor
-workspace $workspace4 output $primaryMonitor
-workspace $workspace5 output $primaryMonitor
-workspace $workspace6 output $primaryMonitor
-workspace $workspace7 output $secondaryMonitor
-workspace $workspace8 output $secondaryMonitor
-workspace $workspace9 output $secondaryMonitor
-workspace $workspace10 output $secondaryMonitor
+workspace $workspace1 output primary
+workspace $workspace2 output $desktopLeft primary
+workspace $workspace3 output primary
+workspace $workspace4 output primary
+workspace $workspace5 output primary
+workspace $workspace6 output primary
+workspace $workspace7 output $laptop primary
+workspace $workspace8 output $laptop primary
+workspace $workspace9 output $laptop primary
+workspace $workspace10 output $laptop primary
 
 # Keys
 exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space_toggle"

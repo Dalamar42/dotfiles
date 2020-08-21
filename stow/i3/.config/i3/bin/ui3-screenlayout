@@ -1,5 +1,21 @@
 #!/bin/sh
-xrandr --dpi 120 \
-    --output eDP-1 --primary --mode 2560x1440 --pos 2560x0 \
-    --output DP-3 --mode 2560x1440 --pos 0x0
+
+MONITORS=$(xrandr | grep " connected" | cut -d" " -f1 | sort | xargs)
+
+if [ "$MONITORS" = "DP-3 eDP-1" ]; then
+    echo "Laptop multi monitor setup"
+    xrandr --dpi 120 \
+        --output eDP-1 --mode 2560x1440 --pos 2560x0 \
+        --output DP-3 --primary --mode 2560x1440 --pos 0x0
+elif [ "$MONITORS" = "eDP-1" ]; then
+    echo "Laptop single monitor setup"
+    xrandr --dpi 120 \
+        --output eDP-1 --primary --mode 2560x1440 --pos 0x0 \
+        --output DP-3 --off
+else
+    echo "Desktop monitor setup"
+    xrandr --dpi 120 \
+        --output HDMI-A-0 --mode 1920x1080 --pos -1080x175 --rotate left \
+        --output DisplayPort-0 --primary --mode 2560x1440 --pos 0x380 --rotate normal
+fi
 
