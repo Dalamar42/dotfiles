@@ -4,6 +4,6 @@ revert() {
 }
 trap revert SIGHUP SIGINT SIGTERM
 xset +dpms dpms 5 5 5
-i3lock -n -d --color 475263
+i3lock -n --color 475263
 revert
 

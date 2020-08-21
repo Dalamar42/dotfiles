@@ -203,8 +203,8 @@ bar {
 }
 
 # lock
-bindsym $mod+Shift+x exec ~/.config/i3/lock.sh 
-bindsym XF86Sleep exec ~/.config/i3/lock.sh
+bindsym $mod+Shift+x exec /.config/i3/bin/ui3-lock
+bindsym XF86Sleep exec /.config/i3/bin/ui3-lock
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
@@ -231,16 +231,20 @@ workspace $workspace10 output DisplayPort-0
 exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:alt_space_toggle"
 
 # Set caps-lock to escape
-exec_always --no-startup-id ~/.config/i3/caps_lock.sh
+exec_always --no-startup-id ~/.config/i3/bin/ui3-caps-lock
 
 # Multimedia keys
-bindsym XF86AudioRaiseVolume exec ~/.config/i3/audio/increase-volume && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec ~/.config/i3/audio/decrease-volume && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec ~/.config/i3/audio/toggle-mute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/bin/ui3-increase-volume && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec ~/.config/i3/bin/ui3-decrease-volume && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec ~/.config/i3/bin/ui3-toggle-mute && pkill -RTMIN+1 i3blocks
+
+# Brightness keys
+bindsym XF86MonBrightnessUp exec ~/.config/i3/bin/ui3-increase-brightness
+bindsym XF86MonBrightnessDown exec ~/.config/i3/bin/ui3-decrease-brightness
 
 # Startup
-exec_always ~/.config/i3/screenlayout.sh
-exec --no-startup-id compton --config ~/.config/i3/compton.conf
+exec_always ~/.config/i3/bin/ui3-screenlayout
+exec --no-startup-id compton --config "~/.config/i3/compton.conf"
 exec --no-startup-id  ~/.config/i3/gsettings.sh
-exec xautolock -time 5 -locker '~/.config/i3/lock.sh' &
+exec xautolock -time 5 -locker '~/.config/i3/bin/ui3-lock' &
 

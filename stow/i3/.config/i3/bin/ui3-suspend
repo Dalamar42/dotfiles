@@ -1,0 +1,3 @@
+#!/bin/sh
+i3lock --color 475263 && sleep 1 && systemctl suspend
+

@@ -13,6 +13,9 @@ set -x PATH $PATH $DOTFILES/bin
 # add the nix bin dir to path
 set -x PATH $PATH $DOTFILES/nix/bin
 
+# add the i3 bin dir to path
+set -x PATH $PATH $DOTFILES/stow/i3/.config/i3/bin
+
 # fix for https://github.com/NixOS/nix/issues/599
 set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive
 

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+MONITORS=$(xrandr | grep " connected" | cut -d" " -f1 | xargs)
+
+for MONITOR in ${MONITORS}; do
+    ${DIR}/ui3-brightness ${MONITOR} Up
+done
+
