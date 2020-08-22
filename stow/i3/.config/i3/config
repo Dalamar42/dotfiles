@@ -207,8 +207,8 @@ bar {
 }
 
 # lock
-bindsym $mod+Shift+x exec /.config/i3/bin/ui3-lock
-bindsym XF86Sleep exec /.config/i3/bin/ui3-lock
+bindsym $mod+Shift+x exec ~/.config/i3/bin/ui3-lock
+bindsym XF86Sleep exec ~/.config/i3/bin/ui3-lock
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
