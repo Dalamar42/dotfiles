@@ -2,11 +2,12 @@
 
 MONITORS=$(xrandr | grep " connected" | cut -d" " -f1 | sort | xargs)
 
-if [ "$MONITORS" = "DP-3 eDP-1" ]; then
+if [ "$MONITORS" = "DP-1 DP-3 eDP-1" ]; then
     echo "Laptop multi monitor setup"
     xrandr --dpi 120 \
         --output eDP-1 --mode 2560x1440 --pos 2560x0 \
-        --output DP-3 --primary --mode 2560x1440 --pos 0x0
+        --output DP-3 --primary --mode 2560x1440 --pos 0x0 \
+        --output DP-1 --mode 1920x1080 --pos -1080x-230 --rotate left
 elif [ "$MONITORS" = "eDP-1" ]; then
     echo "Laptop single monitor setup"
     xrandr --dpi 120 \

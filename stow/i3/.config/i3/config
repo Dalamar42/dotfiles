@@ -14,6 +14,7 @@ set $mod Mod4
 # Monitors
 set $desktopLeft "HDMI-A-0"
 set $laptop "eDP-1"
+set $laptopDesktopLeft "DP-1"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -222,7 +223,7 @@ assign [class="Insomnia"] $workspace5
 
 # workspace default monitors
 workspace $workspace1 output primary
-workspace $workspace2 output $desktopLeft primary
+workspace $workspace2 output $desktopLeft $laptopDesktopLeft primary
 workspace $workspace3 output primary
 workspace $workspace4 output primary
 workspace $workspace5 output primary
