@@ -26,6 +26,7 @@ let
     # Shell
     fish
     fzf
+    direnv
    
     # Web
     curl

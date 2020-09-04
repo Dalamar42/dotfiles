@@ -22,6 +22,10 @@ set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-l
 # set greeting message
 set fish_greeting ""
 
+if type -q direnv
+  eval (direnv hook fish)
+end
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if test -f ~/.localrc
