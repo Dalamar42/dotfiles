@@ -207,10 +207,6 @@ bar {
         }
 }
 
-# lock
-bindsym $mod+Shift+x exec ~/.config/i3/bin/ui3-lock
-bindsym XF86Sleep exec ~/.config/i3/bin/ui3-lock
-
 # default workspaces
 assign [class="Google-chrome"] $workspace1
 assign [class="X-terminal-emulator"] $workspace2
@@ -247,6 +243,12 @@ bindsym XF86AudioMute exec ~/.config/i3/bin/ui3-toggle-mute && pkill -RTMIN+1 i3
 # Brightness keys
 bindsym XF86MonBrightnessUp exec ~/.config/i3/bin/ui3-increase-brightness
 bindsym XF86MonBrightnessDown exec ~/.config/i3/bin/ui3-decrease-brightness
+
+# Lock key
+bindsym $mod+Shift+x exec ~/.config/i3/bin/ui3-lock
+
+# Suspend key
+bindsym XF86Sleep exec ~/.config/i3/bin/ui3-suspend
 
 # Startup
 exec_always ~/.config/i3/bin/ui3-screenlayout
