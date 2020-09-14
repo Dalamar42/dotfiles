@@ -236,9 +236,9 @@ exec_always --no-startup-id "setxkbmap -model pc105 -layout us,gr -option grp:al
 exec_always --no-startup-id ~/.config/i3/bin/ui3-caps-lock
 
 # Multimedia keys
-bindsym XF86AudioRaiseVolume exec ~/.config/i3/bin/ui3-increase-volume && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec ~/.config/i3/bin/ui3-decrease-volume && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec ~/.config/i3/bin/ui3-toggle-mute && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/bin/ui3-increase-volume
+bindsym XF86AudioLowerVolume exec ~/.config/i3/bin/ui3-decrease-volume
+bindsym XF86AudioMute exec ~/.config/i3/bin/ui3-toggle-mute
 
 # Brightness keys
 bindsym XF86MonBrightnessUp exec ~/.config/i3/bin/ui3-increase-brightness
