@@ -67,17 +67,18 @@ There's a few special files in the hierarchy.
   entries to `$PATH`
 - **install/**: Contains various topical installation scripts
 
-## Thanks
+## Thanks & Licenses
 
-Thanks to [Tom McAdam](https://github.com/tfm), then transitively 
-to [Zach Holman](http://github.com/holman) and his thanks:
+Thanks to [Tom McAdam], then transitively to [Zach Holman] and his thanks:
 
-"I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
+"I forked [Ryan Bates]' excellent [dotfiles][ryan-dotfiles] for a couple years before the
 weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
 dotfiles were an easy way to get into bash customization, and then to jump ship
 to zsh a bit later. A decent amount of the code in these dotfiles stem or are
 inspired from Ryan's original project."
+
+Credit for the `newscript.template` goes to [Maciej Radzikowski] for the
+[minimal bash template][script-template] reused in accordance to its [MIT license][script-license].
 
 [stow]: https://www.gnu.org/software/stow/
 [nix]: https://nixos.org/nix/
@@ -86,3 +87,10 @@ inspired from Ryan's original project."
 [i3]: https://i3wm.org/
 [rofi]: https://github.com/davatorium/rofi
 [i3blocks]: https://github.com/vivien/i3blocks
+[Tom McAdam]: https://github.com/tfm
+[Zach Holman]: http://github.com/holman
+[Ryan Bates]: http://github.com/ryanb
+[ryan-dotfiles]: http://github.com/ryanb/dotfiles
+[Maciej Radzikowski]: https://gist.github.com/m-radzikowski
+[script-template]: https://gist.github.com/m-radzikowski/53e0b39e9a59a1518990e76c2bff8038
+[script-license]: https://gist.github.com/m-radzikowski/d925ac457478db14c2146deadd0020cd
