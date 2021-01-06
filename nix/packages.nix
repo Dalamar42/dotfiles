@@ -27,6 +27,7 @@ let
     fish
     fzf
     direnv
+    starship
    
     # Web
     curl

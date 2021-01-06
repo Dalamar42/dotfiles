@@ -41,3 +41,6 @@ end
 for file in ~/.config/fish/aliases.fish/*.fish
   source $file
 end
+
+# Use the starship prompt
+starship init fish | source
