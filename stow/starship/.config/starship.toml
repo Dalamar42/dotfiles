@@ -1,0 +1,10 @@
+[aws]
+disabled = true
+
+[directory]
+truncation_length = 10
+truncate_to_repo = true
+truncation_symbol = ".../"
+
+[package]
+disabled = true
