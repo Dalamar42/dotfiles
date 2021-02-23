@@ -13,11 +13,22 @@ set -x PATH $PATH $DOTFILES/bin
 # add the nix bin dir to path
 set -x PATH $PATH $DOTFILES/nix/bin
 
+# setup the env variables that nix requires
+if test -f ~/.nix-profile/etc/profile.d/nix.sh
+    eval (bash -c "source ~/.nix-profile/etc/profile.d/nix.sh; echo export NIX_PATH=\"\$NIX_PATH\"; echo export PATH=\"\$PATH\"; echo export NIX_SSL_CERT_FILE=\"\$NIX_SSL_CERT_FILE\"")
+end
+
 # add the i3 bin dir to path
-set -x PATH $PATH $DOTFILES/stow/i3/.config/i3/bin
+switch (uname)
+    case Linux
+        set -x PATH $PATH $DOTFILES/stow/i3/.config/i3/bin
+end
 
 # fix for https://github.com/NixOS/nix/issues/599
-set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive
+switch (uname)
+    case Linux
+        set -gx LOCALE_ARCHIVE (nix-env --installed --no-name --out-path --query glibc-locales)/lib/locale/locale-archive
+end
 
 # set greeting message
 set fish_greeting ""
