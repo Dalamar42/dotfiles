@@ -17,3 +17,5 @@ stow/vscode/.config/Code/*
 !stow/vscode/.config/User/settings.json
 !stow/vscode/.config/User/keybindings.json
 !stow/vscode/.config/User/snippets
+
+stow/iterm2/.config/iterm2/AppSupport

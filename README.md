@@ -48,10 +48,16 @@ Set `fish` as the default shell by following the instructions in [fish-default].
 If you installed `fish` via `nix` in the previous step `fish` will not be in
 `/usr/local/bin/fish`. Use `which fish` to find the correct path.
 
-### Install i3
+### Install tiled window manager
+
+#### Install i3 (Linux)
 - Install [i3]
 - Install [rofi] application launcher
 - Install [i3blocks] status bar
+
+#### Install Yabai (Mac)
+- Install [yabai]
+- Install [skhd]
 
 ## Components
 
@@ -94,3 +100,5 @@ Credit for the `newscript.template` goes to [Maciej Radzikowski] for the
 [Maciej Radzikowski]: https://gist.github.com/m-radzikowski
 [script-template]: https://gist.github.com/m-radzikowski/53e0b39e9a59a1518990e76c2bff8038
 [script-license]: https://gist.github.com/m-radzikowski/d925ac457478db14c2146deadd0020cd
+[yabai]: https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
+[skhd]: https://github.com/koekeishiya/skhd
