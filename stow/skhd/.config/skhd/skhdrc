@@ -1,7 +1,9 @@
 # Navigation
+# East/West also move between different displays
+# North/South also move between different spaces on the same display
 cmd - j : yabai -m window --focus west || yabai -m display --focus west
-cmd - k : yabai -m window --focus south || yabai -m display --focus south
-cmd - i : yabai -m window --focus north || yabai -m display --focus north
+cmd - k : yabai -m window --focus south || if [ (yabai -m query --spaces --space | jq '.index') != (yabai -m query --displays --display | jq '.spaces[-1]') ]; yabai -m space --focus next; end
+cmd - i : yabai -m window --focus north || if [ (yabai -m query --spaces --space | jq '.index') != (yabai -m query --displays --display | jq '.spaces[0]') ]; yabai -m space --focus prev; end
 cmd - l : yabai -m window --focus east || yabai  -m display --focus east
 
 # Moving windows
@@ -21,7 +23,7 @@ shift + cmd - space : yabai -m window --toggle float;\
   yabai -m window --grid 4:4:1:1:2:2
 
 # Fullscreen
-cmd - f : yabai -m window --toggle zoom-fullscreen
+alt - f : yabai -m window --toggle zoom-fullscreen
 
 # Resize windows
 ctrl + alt - j : \
