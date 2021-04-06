@@ -58,4 +58,8 @@
     enabled = 1
 [diff]
 	submodule = log
+[pull]
+    rebase = true
+[rebase]
+    autoStash = true
 
