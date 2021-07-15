@@ -68,7 +68,11 @@ set guifont=DejaVu\ Sans\ Mono\ 10
 set antialias
 
 " -- Set vim to use the system's clipboard so we can yank-paste outside of vim
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
 " -- Rebind navigation to a wasd like ijkl
 noremap j h
